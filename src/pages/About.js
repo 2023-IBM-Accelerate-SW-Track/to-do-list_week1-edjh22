@@ -11,16 +11,16 @@ export default class About extends Component {
       <div className="centered">
         <img 
           className="profile_image"
-          // Image goes here
-          alt="Profile Pic"
+    
+          alt='digital_board='
           ></img>
       </div>
     </div>
     <div className="split right">
       <div className="centered">
-        <div className="name_title">Your Name</div>
+        <div className="name_title">Jose Hernandez</div>
         <div className="brief_description">
-          // Details about you goes here
+          
         </div>
       </div>
     </div>

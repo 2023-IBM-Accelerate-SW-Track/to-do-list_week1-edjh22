@@ -25,7 +25,10 @@ class AddTodo extends Component {
     handleSubmit = (event) => {
       event.preventDefault();
       if (this.state.content.trim()) {
-        this.props.addTodo(this.state);
+        this.props.addTodo({
+          content: this.state.content,
+          id: Math.random(),
+        });
         this.setState({
           content: "",
         });
@@ -37,12 +40,12 @@ class AddTodo extends Component {
           <TextField
             label="Add New Item"
             variant="outlined"
-            //onChange={call handleChange here}
-            //value={set the content state here}
+            onChange={ this.handleChange }
+            value={ this.state.content }
           />
           <Button
             style={{ marginLeft: "10px" }}
-            //onClick={call handleSubmit here}
+            onClick={ this.handleSubmit }
             variant="contained"
             color="primary"
           >
